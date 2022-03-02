@@ -7,7 +7,13 @@ function App() {
 	return (
 		<div className='App'>
 			<NavBar />
-			<Carta titulo='hola' contenido='lorem' />
+			<Galeria>
+				<CartaM titulo='hola' contenido='lorem' />
+				<Carta titulo='hola' contenido='lorem' />
+				<Carta titulo='hola' contenido='lorem' />
+				<Carta titulo='hola' contenido='lorem' />
+				<Carta titulo='hola' contenido='lorem' />
+			</Galeria>
 		</div>
 	);
 }
@@ -47,5 +53,37 @@ function Carta({
 		</article>
 	);
 }
+
+function CartaM({
+	titulo = "titulo",
+	contenido = "contenido",
+	fecha = new Date(),
+}: {
+	titulo?: string | undefined;
+	contenido?: string | undefined;
+	fecha?: Date | undefined;
+}): JSX.Element {
+	return (
+		<article className='carta--medio'>
+			<h2 className='carta__titulo'>{titulo}</h2>
+			<span className='carta__fecha'>{fecha.toDateString()}</span>
+			<p className='carta__contenido'>{contenido}</p>
+		</article>
+	);
+}
+
+const Galeria = ({
+	children,
+}: {
+	children:
+		| boolean
+		| ReactChild
+		| ReactFragment
+		| ReactPortal
+		| null
+		| undefined;
+}): JSX.Element => {
+	return <div className='galeria'>{children}</div>;
+};
 
 export default App;

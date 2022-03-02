@@ -33,6 +33,8 @@ button {
 .carta {
 	background-color: rgb(1, 6, 70);
 	padding: 1rem;
+	border-radius: 1rem;
+
 	&__titulo {
 		color: #ffffff;
 	}
@@ -42,4 +44,23 @@ button {
 	&__fecha {
 		color: rgba(255, 255, 255, 0.75);
 	}
+	&--medio{
+		@extend .carta;
+		
+		background-color: rgb(236, 41, 6);
+	}
+}
+
+.galeria{
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
+	grid-template-rows: 20rem;
+	grid-auto-flow: row dense;
+	padding: 1rem;
+	& .carta--medio{
+		grid-column-end: span 2;
+	}
+
+
 }
