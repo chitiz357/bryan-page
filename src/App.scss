@@ -1,0 +1,45 @@
+:root {
+	--font-color: rgb(255, 255, 255);
+}
+
+button {
+	font-size: calc(10px + 2vmin);
+}
+
+.nav-bar {
+	/*asdfas*/
+	background: royalblue;
+	padding: 1rem;
+	&__mensaje {
+		color: white;
+	}
+}
+
+.inicio {
+	background: darkslategray;
+	text-align: center;
+
+	height: 100vh;
+	&__titulo {
+		/*dfasf*/
+		margin-top: 10rem;
+		color: rgba(white, 0.8);
+
+		font-size: 5rem;
+		font-weight: 600;
+		padding-top: 10rem;
+	}
+}
+.carta {
+	background-color: rgb(1, 6, 70);
+	padding: 1rem;
+	&__titulo {
+		color: #ffffff;
+	}
+	&__contenido {
+		color: rgba(255, 255, 255, 0.8);
+	}
+	&__fecha {
+		color: rgba(255, 255, 255, 0.75);
+	}
+}
